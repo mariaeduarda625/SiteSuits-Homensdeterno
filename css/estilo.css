@@ -74,7 +74,13 @@ nav ul li a {
     text-align: left;
     text-shadow: 4px 2px  black;
 }
+section{
+    scroll-margin-top: 200px;
+}
+.bannertexto{
+    margin-left: 8%;
 
+}
 
 #sobre{
     padding: 35px;
@@ -149,61 +155,145 @@ nav ul li a {
 }
 
 
-
-
-#personagens{
-    padding: 35px;
-    background-color:#818181  ;
-    color: #fff;
-    
+.card{
+    width: 70%;
 }
 
-.personagens-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    max-width: 1400px;
-    margin: auto;
+#personagens .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+    gap: 20px;
+    text-align: center;
+    padding: 50px 0;
 }
 
-.personagens-texto{
-    flex: 1;
-    padding: 20px;
+#personagens .item{
+   border: 1px solid #c0c0c0  ;
+   background-color: #555555  ;
+   border-radius: 10px; 
+   padding: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition:transform 0.2s ease, box-shadow 0.2s ease;
+   cursor: pointer;
+
+}
+#personagens .item:hover{
+    transform: translatex(-5px);
+    box-shadow: 0 8px 16px  rgba(0,0,0, 0.2);
+}
+#personagens .item:active{
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.15);
 }
 
-/* .personagens-texto h1{
-    font-size: 1.8em;
-    margin-bottom: 20px; 
-}*/
-
-.personagens-texto p {
+#personagens h1{
     font-size: 1;
-    line-height: 1.5;
-    text-align: justify;
+    line-height: 1.8;
+    text-align: center;
     margin-top: 10px;
 }
 
-.personagens-texto h2{
-    margin-top: 20px;
-    color: black;
-
+#personagens .item p{
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #c0c0c0;
 }
 
-.personagens-texto a{
+#personagens .imagem img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+
+/*Modal*/
+.modal{
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: center;
+    /* margin-top: 50PX; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50PX;
+}
+.card1{
+    max-width: 300px;
+}
+.card1 h3{
+    margin-top: 0;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: blue;
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.8em;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.fonte{
-    font-size: 0.8em ;
+.modal:target{
+    display: flex;
+}
+.modal-content{
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: justify;
+    box-shadow: 0 5px 20px rgba(0,0,0, 0.2);
+
+}
+.close-btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    background: #dc3545;
+    color:#ffffff;
+    border-radius: 6px;
+    text-decoration: none;
 }
 
 
-
-
-
+#imagens h1{
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    gap:40px ;
+    max-width: 50px;
+    margin-left: 20%;
+}
+.galeriaimg{
+    width: 50%;
+    height: 5%;
+    border-radius: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 2%;
+}
+.galeriaimg:hover{      
+    transform: scale(1.05);
+}
 
 #curiosidades{
     padding: 35px;
@@ -252,17 +342,15 @@ nav ul li a {
 
 .fonte{
     font-size: 0.8em ;
+    
+}
+footer{
+    text-align: center;
 }
 
 
 
-
-
-
-
-
-
-@media(max-width:575px){
+@media(max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
         text-align: center;
@@ -275,6 +363,29 @@ nav ul li a {
     .banner{
         margin-top: 120px;
 
+    }
+    section{
+        scroll-margin-top: 200px;
+    }
+    .modal{
+        margin-top: 100px;
+    }
+    .modal-content{
+        max-height: 60vh;
+        margin: 300px;
+    }
+    .galeria{
+        flex-direction: column;
+        display: flex;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .galeriaimg{
+        flex-direction: column;
+        display: flex;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 100%;
     }
 
    
