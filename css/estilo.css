@@ -166,16 +166,18 @@ section{
     text-align: center;
     padding: 50px 0;
 }
-
 #personagens .item{
-   border: 1px solid #c0c0c0  ;
-   background-color: #555555  ;
-   border-radius: 10px; 
-   padding: 20px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   transition:transform 0.2s ease, box-shadow 0.2s ease;
-   cursor: pointer;
-
+    border: 1px solid #c0c0c0  ;
+    background-color: #555555  ;
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
 }
 #personagens .item:hover{
     transform: translatex(-5px);
@@ -185,7 +187,6 @@ section{
     transform: scale(0.98);
     box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.15);
 }
-
 #personagens h1{
     font-size: 1;
     line-height: 1.8;
@@ -244,6 +245,8 @@ section{
     text-decoration: none;
     border-radius: 6px;
     cursor: pointer;
+    margin:auto;
+   align-self: flex-start;
 }
 
 .modal:target{
@@ -271,7 +274,7 @@ section{
 }
 
 
-#imagens h1{
+.imagens h1{
     color: black;
     text-align: center;
     margin-top: 50px;
@@ -311,7 +314,7 @@ section{
     line-height: 1.6;
     padding: 0 15px;
 }
- #imagens .fonte{
+ .imagens .fonte{
     text-align: center;
     color: white;
     font-size: 0.8em ;
@@ -324,7 +327,7 @@ section{
     
 }
 
-.curiosidade-container{
+/* .curiosidade-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -360,8 +363,12 @@ section{
     color: #ffffff;
     text-decoration: none;
     font-size: 0.8em;
-}
+} */
 
+#contato{
+    text-align: center;
+    margin-bottom: 5px;
+}
 .fonte{
     font-size: 0.8em ;
     
